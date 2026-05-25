@@ -2,9 +2,9 @@
 
 > Dokumen ini mendeskripsikan kontrak API Satu Data Pemerintahan Dalam Negeri berupa data statistik.
 > - Nama layanan: Data Statistik Sektoral API dari Pemda ke Portal Pelita
-> - Versi kontrak: 1.3
-> - Tanggal Update: 26 September 2025
-> - Base URL: https://api.contoh.go.id (URL Portal Pemda - bisa menggunakan SPLP)
+> - Versi kontrak: 1.4
+> - Tanggal Update: 25 Mei 2026
+> - Base URL: https://api.contoh.go.id (URL Portal Pemda - menggunakan SPLP)
 > - Auth: Bearer Token (opsional untuk auth, kecuali data BNBA harus menggunakan token)
 
 ## Header umum
@@ -60,14 +60,14 @@
       "nama_indikator": "Jumlah Penerima Bantuan Langsung Pangan Pemerintah Provinsi Gorontalo (BLP3G)",
       "sumber_referensi": "",
       "kode_produsen_data": "", // kode skpd atau kode opd
-      "produsen_data": "Dinas Sosial",
-      "jadwal_rilis": "2025-01-17", // BELUM SEPAKAT -perlu dipindah di detail nilai data berdasarkan di NTT
+      "nama_produsen_data": "Dinas Sosial",
+      "jadwal_release": "2025-01-17", // BELUM SEPAKAT - perlu dipindah di detail nilai data berdasarkan di NTT
       "jadwal_pemutakhiran": "Tahunan",
       "jenis_data": "statistik",
       "kode_standard_data": "", // dari portal indah bps - Kode SDS
       "klasifikasi_data": "terbuka",
-      "definisi": "", // dari portal indah bps - Definisi
-      "klasifikasi_penyajian": "", // dari portal indah bps - Klasifikasi Penyajian
+      "definisi": "", // optional_dari portal indah bps - Definisi
+      "klasifikasi_penyajian": "", // optional_dari portal indah bps - Klasifikasi Penyajian
       "satuan": "Orang",
       "kategori_rad": "", // berdasarkan Rancangan Arsitektur Data dan Informasi SPBE
       "status_prioritas": false,
@@ -157,6 +157,8 @@
     "page": 1,
     "page_size": 25
   },
+  "kode_urusan": "001",
+  "kode_bidang_urusan": "1.02",
   "field": [
     {
       "name_field": "variabel_1",
