@@ -2,9 +2,9 @@
 
 > Dokumen ini mendeskripsikan kontrak API Satu Data Pemerintahan Dalam Negeri berupa data statistik.
 > - Nama layanan: Data Statistik Sektoral API dari Pemda ke Portal Pelita
-> - Versi kontrak: 1.4
-> - Tanggal Update: 25 Mei 2026
-> - Base URL: https://api.contoh.go.id (URL Portal Pemda - menggunakan SPLP)
+> - Versi kontrak: 1.5
+> - Tanggal Update: 29 Mei 2026
+> - Base URL: https://api-splp.layanan.go.id/xxxxx/1.0/ (URL Portal Pemda - menggunakan SPLP)
 > - Auth: Bearer Token (opsional untuk auth, kecuali data BNBA harus menggunakan token)
 
 ## Header umum
@@ -16,7 +16,7 @@
 
 - page: integer, min 1, default 1
 - page_size: integer, default 25 // tidak perlu di query param
-- tahun: integer, default 2024
+- tahun: integer, default 2026
 
 ## Terdapat dua API untuk diintegrasikan:
 
@@ -30,7 +30,7 @@
 - Fungsi: Mengembalikan daftar dataset beserta definisi field dan baris data.
 - Query parameter opsional:
     - page
-    - tahun: integer // tahun data berdasarkan daftar data daerah, default tahun 2024
+    - tahun: integer // tahun data berdasarkan daftar data daerah, default tahun 2026
     - kode_provinsi: string // catatan untuk integrasi provinsi
     - kode_kab_kota: string // optional
     - kode_bidang_urusan: string
@@ -260,4 +260,3 @@
 ## Catatan:
 
 Data Tahun perlu pembahasan lebih detail, untuk mengakomodir periode data, tahun data, jadwal rilis dll
-
